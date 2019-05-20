@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vik"
+    tools:ignore="MissingDefaultResource">
+
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000"
+                android:text="WPS Crack"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/wpstxt1" />
+
+            <TextView
+                android:id="@+id/toolbar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#000"
+                android:text="Steps to crack WPS WIFI"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textViesddsw1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="1.. switch to monitor mode " />
+
+            <ImageView
+                android:id="@+id/imageViwdddd12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingBottom="40dp"
+                android:paddingTop="10dp"
+                app:srcCompat="@drawable/wps_momo" />
+
+            <TextView
+                android:id="@+id/textViesddssssw1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2.. We use the following command to list out all WPS enabled WIFI" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#808080">
+
+                <TextView
+                    android:id="@+id/texddtVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fuckyou" />
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/sss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingBottom="40dp"
+                android:paddingTop="10dp"
+                app:srcCompat="@drawable/wash" />
+
+            <TextView
+                android:id="@+id/texddtVisse2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/xcxc" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#808080">
+
+                <TextView
+                    android:id="@+id/textVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wpcode1" />
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/ssws"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:srcCompat="@drawable/wps_final" />
+
+            <TextView
+                android:id="@+id/texddtVisse2a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dp"
+                android:text="we get the password after running the reaver tool" />
+
+            <TextView
+                android:id="@+id/texddtsVisse2a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="use the following command to get the help of reaver tool and also get to know the advanced options" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#808080">
+
+                <TextView
+                    android:id="@+id/tfextVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="~#reaver --help" />
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/ssdws"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:srcCompat="@drawable/reaver_help" />
+
+            <TextView
+                android:id="@+id/tfextVieddd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="80dp"
+                android:text="try to use the advanced options if possible...." />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="@string/adunitid"
+        app:layout_anchor="@+id/scrollView4"
+        app:layout_anchorGravity="bottom|center"></com.google.android.gms.ads.AdView>
+
+
+</android.support.design.widget.CoordinatorLayout>

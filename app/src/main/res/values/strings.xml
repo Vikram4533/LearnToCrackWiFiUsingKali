@@ -1,0 +1,204 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+
+    <string name="adunitid">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="app_name">Learn To Crack WiFi Using Kali</string>
+
+    <string name="large_text"><![CDATA[
+        • WEP is an old encryption , but its still used in some networks .
+        \n• It uses an algorithm called RC4 where each packet is encrypted at
+        the AP and is then decrypted at the client .
+         \n• WEP ensures that each
+        packet has a unique key stream by using a random 24-bit Initializing
+        Vector (IV) ,this IV is contained in the packets as plaintext.
+        \n• The short IV means in a busy network we can collect more than two
+        packets with the same IV, then we can use aircrack-ng to determine
+        the key stream and the WEP key using statistical attacks.
+        \n• Conclusion :The more IV\'s that we collect the more likely for us to
+        crack the key.\n\n
+        there are two ways to crack\n
+        1..when the network is busy with some connected devices.\n
+         All we need to do is to run airodump-ng to log all traffic from the target network.\n
+    ]]></string>
+    <string name="code1"> > airodump-ng —channel [channel] —bssid [bssid] —write [file-name] [interface]\n
+        Ex: airodump-ng —channel 6 —bssid 11:22:33:44:55:66 —write out mon0</string>
+    <string name="text2">\nAt the same time we should use aircrack-ng to try and crack the key using the
+        captured file created by the above command.\n</string>
+    <string name="code2">
+        > aircrack-ng [file-name]\n
+        Ex: aircrack-ng out-Ol.cap\n</string>
+    <string name="text3">
+        \nKeep both programs running at the same time and aircrack-ng will be able to
+        determine the key when the number of IV\'s run out.\n
+        We get password something of this format 00:00:00:00:00:00 , now we have to remove the semicolons from the output and use the plain characters to connect to WIFI
+        \n\n\n
+        2..When the network is not busy or no device is connected to it \n
+         What if the AccessPoint was idle , or had no clients associated with it ?\n
+        In this case we have to inject packets into the traffic in order to
+        force the router to create new packets with new IV\'s. \n
+
+        Before we can start injecting packets into the traffic we have
+        to fake authenticate our WIFI card with the AccessPoint, because AP\'s ignore
+        any requests that come from devices that are not associated
+        with the AP . \nThis can be done easily using airmon-ng like so \n</string>
+    <string name="code3">
+        > aireplay-ng —fakeauth 0 -a [targe MAC] -h [your MAC] [interface]\n
+        ex: aireplay-ng --fakeauth 0 -a EO:69:95:B8:BF:77 -h 00:cO:ca:6c:ca:12 mon0</string>
+    <string name="text4">
+        \nIf this fake authentication was successful the value under the
+        "AUTH" column in airodump-ng will change to "OPN" \n
+
+        In this method after successfully associating with the target
+        AP , we will wait for an ARP packet.\nWe will then capture this
+        packet and inject it into the traffic,this will force the AP to
+        generate a new ARP packet with a new IV , we capture this
+        new packet and inject it into the traffic again , this process is
+        repeated until the number of IV\'s captured is sufficient enough
+        to crack the key just like the above case\n</string>
+    <string name="code4">> aireplay-ng --arpreplay -b [targe MAC] -h [your MAC] [interface]\n
+        ex: aireplay-ng --arpreplay -b EO:69:95:B8:BF:77 -h 00:c0:ca:6c:ca:12 mon0 </string>
+    <string name="text5">
+        And after getting enough data or packets
+        we can now attack the WiFi using the aircrack-ng and get to know the password as mentioned in the first case\n\n\n\n\n\n\n</string>
+
+
+    <!--///////////////////////////////////////////////////////////////////////////////////wps///////////////////////////////////////////////////-->
+    <string name="wpstxt1">
+        • WPS is a special case of WPA/WPA2 that allows users to connect to WPS enabled
+        networks easily, using a WPS button or only by clicking on WPS
+        functionality.\n
+        • Authentication is done using an 8 digit long pin, this means that
+        there is a relatively small number of pin combination and using
+        brute force we can guess the pin in less than 10 hours.\n
+        • A tool called reaver can then recover the WPA/WPA2 key from the 8 digit pin
+        pin.\n
+        • Note : This flaw is in the WPS feature and not in \nWPA/WPA2 ,
+        however it allows us to crack any \nWPA/WPA2 without using a
+        wordlist and without any clients.\n
+    </string>
+    <string name="fuckyou">
+         ~# wash -i [name-of-the-card]
+        </string>
+    <string name="xcxc">
+        3..Then we attack the WiFi using the reaver tool which can get the password using brute force\n
+        Reaver tool command:
+        </string>
+    <string name="wpcode1">
+        ~#reaver -b [BSSID] -c [Channel] -i [name-of-the-card]
+
+    </string>
+    <string name="textwp2">
+        \nAfter running above command we get the WiFi password of WPS enabled WPA/WPA2 network\n\n\n\n\n\n\n\n\n
+    </string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!--............/////////wpa////////////wpa2///////////////////////////////////////////////-->
+    <string name="text3333"> 3..patience and interest to learn.</string>
+    <string name="wpatxt1">
+        • WPA was designed to address the issues in WEP and provide
+        better encryption.
+        \n• The main issue in WEP is the short IV which means that they
+        can be repeated, therefore by collecting a large number of IV\'s
+        arcrack-ng can determine the key stream and the WEP key.
+        \n• In WPA each packet is encrypted with a unique temporary key,
+        this means the number of data packets that we collect is
+        irrelevant.
+        \n• WPA and WPA2 are similar the only difference is that WPA
+        uses an algorithm called CCMP. </string>
+    <string name="wpatxt2">
+        To crack a WPA/WPA2 AP with WPS disabled we need two things \n
+       1.Capture of a handshake \n
+       2. A wordlist \n\n</string>
+
+    <string name="wpatxt3">Capture of a Handshake</string>
+    <string name="wpatxt4">
+Handshake packets are sent every time a client associates with the target
+        AP. So to capture it we are going to use following commands.\n</string>
+    <string name="wptxt225">
+        2.. Start airodump-ng on the target AP to capture handshake in a file </string>
+    <string name="wpacode1">
+        ~# airodump-ng --channel [channel] --bssid [bssid] --write [file-name] [interface]</string>
+    <string name="wptxt6">
+\n3.. Wait for a client to connect to the AP\'S or deauthenticate a connected
+client (if any) for a very short period of time so that their system will connect
+        back automatically.\nHere is the command to Deauthenticate a client: </string>
+    <string name="wpacode2">
+~# aireplay-ng --deauth [number of deauth packets] -a [AP] -c [target] [interface]</string>
+    <string name="wptxt7">After that airodump-ng will say "WPA handshake".We have successfully captured a Handshake\n\n </string>
+    <string name="wpatx3">2...Create Wordlist</string>
+    <string name="crutxt1">
+The 2nd thing that we need to crack WPA/WPA2 is a list of passwords to
+        guess, you can download a ready wordlist from the Internet or create your own using a tool called crunch</string>
+    <string name="crccode">
+~# crunch [min] [max] [characters-lowerlupperlnumberslsymbols] -t [pattern] -o file \n
+ex: crunch 5 6 123ab -t a@@@b -o wordlist </string>
+    <string name="final1">
+We are going to use aircrack-ng to crack the key. It does this by
+combining each password in the wordlist with AP name (ESSID) to
+compute a Pairwise Master Key (PMK) using the pbkdf2 algorithm, the
+        PMK is the compared to the handshake file. \n</string>
+    <string name="finalcode">
+~# aircrack-ng [HANDSHAKE FILE] -w [WORDLIST]\n
+ex: aircrack-ng handshake-01.cap -w wordlist </string>
+    <string name="laston">We get the passoward after running the above commands</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="vik">\n\n\n\n\n</string>
+
+    <string name="into">WIFI has emerged as the single most popular wireless network protocol of this century,WIFI technology powers most of home networks , many
+    business Local area network and public hotspot network.\n\nAs there is huge demand for the Internet there is equal amount of demand for the WIFI so each and every WIFI has got its own Security  and each Security has some flaws and we as hackers
+        search for the flaws and break the WIFI key and use the Internet.\n\nHere in this tutorial you are going to learn to crack the WIFI key ,whether it is WEP , WSP , WPA or WPA2 encrypted.\n\n
+    </string>
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+    <string name="momotxt">
+         • Each Network card has physical static address assigned by the card manufacturer called MAC address(Media Access Control).\n
+          • This address is used between devices to identify each other and to transfer packets to the right place.\n
+          • Each Packet has a source MAC address and a destination MAC\n
+         • We can change our MAC address value that is stored in the memory using a program called macchanger like so \n
+        </string>
+    <string name="momocode">~#ifconfig [INTERFACE] down\n
+~#machanger -m [MAC] [INTERFACE]\n
+~#ifconfig [INTERFACE] up</string>
+    <string name="momocode1"> [INTERFACE] -> your wifi card name \n [MAC]->the mac address you want\n\n
+   • We can also set a random MAC address by the following code
+    </string>
+    <string name="momocode12"> ~#machanger -r [INTERFACE]
+    </string>
+
+
+    <string name="momotxt2">• MAC address is static we receive the packets that are sent to our MAC address only.
+        \nBut this only applies to the default mode of WIFI adapter , which is MANAGED mode
+        \nHowever all most all the WIFI adapter comes with another mode i.e MONITOR mode and this mode allows us to capture all the packets in our WIFI range\n
+    here are the commands to switch from Managed to Monitor mode:\n
+    </string>
+    <string name="momotxt3">command to list out names of all WIFI cards </string>
+    <string name="momocode2">~#airmon-ng</string>
+    <string name="momotxt4">\nCommand to start Monitor mode</string>
+    <string name="momocode3">~#airmon-ng start [name-of-wifi-card-as-in-the-list]\n  or
+        \n~#iwconfig [name-of-wifi-card-as-in-the-list] mode monitor</string>
+    <string name="momotxt5">\ncommand to stop monitor mode</string>
+    <string name="momocode4">~#airmon-ng stop [name-of-wifi-card]</string>
+    <string name="momotxt6">\ncommand To list out all the WIFI\'s in our range</string>
+    <string name="momocode5">~#airodump-ng [name-of-card]</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
+    <string name="start_level">Level 1</string>
+    <string name="next_level">Next Level</string>
+    <!-- -
+        This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
+        For more information, see https://support.google.com/admob/answer/3052638
+    <!- -->
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <string name="link"><a href="http://www.zsecurity.shop/">http://www.zsecurity.shop</a></string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+</resources>

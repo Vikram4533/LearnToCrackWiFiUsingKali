@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424949">
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_marginTop="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textSize="40dp"
+        android:text="About App" />
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"  android:textColor="#FFF"
+        android:text="WIFI crack app that lets you to learn to hack any kind of WIFI networks around you be it WEP,WPA or WPA2.In this app your going to learn about the flaws present in the WIFI encryption and use them to crack the WIFI" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:textColor="#FFF"
+        android:textSize="40dp"
+        android:text="Contact me" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:textColor="#FFF"
+        android:text="Gmail : 45vikram33@gmail.com" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vik"
+    tools:ignore="MissingDefaultResource">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/vik"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000"
+                android:text="MAC Adress"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/momotxt" />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#808080">
+
+                <TextView
+                    android:id="@+id/textVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/momocode" />
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textVi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/momocode1"  />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#808080">
+
+                <TextView
+                    android:id="@+id/textV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/momocode12" />
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingBottom="40dp"
+                android:paddingTop="20dp"
+                app:srcCompat="@drawable/macchange" />
+
+
+            <TextView
+                android:id="@+id/toolbar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#000"
+                android:text="Enabling Monitor Mode of WIFI adapter"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textVie28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/momotxt2" />
+
+            <TextView
+                android:id="@+id/stextVie12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/momotxt3" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#808080">
+
+                <TextView
+                    android:id="@+id/stextVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/momocode2" />
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/stextVie124"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/momotxt4" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#808080">
+
+                <TextView
+                    android:id="@+id/sstextVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/momocode3" />
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                app:srcCompat="@drawable/monitormode" />
+            <!--////////////////-->
+
+            <TextView
+                android:id="@+id/stexatVie5124"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="airmon-ng changes the name of the WIFI card so now on we have to use the name given by airmon-ng here it is changed from wlan0 to wlan0mon" />
+
+            <TextView
+                android:id="@+id/stexatVie124"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/momotxt5" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#808080">
+
+                <TextView
+                    android:id="@+id/sstfxtsVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/momocode4" />
+
+
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/imageViewss12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingBottom="40dp"
+                android:paddingTop="20dp"
+                app:srcCompat="@drawable/stopomo" />
+            <TextView
+                android:id="@+id/stexstVie124"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/momotxt6" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#808080">
+
+                <TextView
+                    android:id="@+id/sstecxtVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/momocode5" />
+
+            </HorizontalScrollView>
+
+
+            <ImageView
+                android:id="@+id/imageViwdddd12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingBottom="80dp"
+                android:paddingTop="20dp"
+                app:srcCompat="@drawable/airodump" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="@string/adunitid"
+        app:layout_anchor="@+id/scrollView3"
+        app:layout_anchorGravity="bottom|center"></com.google.android.gms.ads.AdView>
+
+</android.support.design.widget.CoordinatorLayout>

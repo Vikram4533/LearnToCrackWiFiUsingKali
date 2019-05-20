@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="viktech.learntocrackwifiusingkali.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#454545">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#000" android:textSize="30dp"
+        android:fontFamily="serif-monospace"
+        android:width="400dp"
+        android:height="100dp"
+        android:textColor="#FFF"
+        android:text="Monitor Mode" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:width="400dp"
+        android:height="100dp"
+        android:background="#000"
+        android:fontFamily="serif-monospace"
+        android:text="Introduction"
+        android:textColor="#FFF"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/wpabut"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/wpsbt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:height="100dp"
+        android:background="#000"
+        android:fontFamily="serif-monospace"
+        android:text="WPA / WPA2"
+        android:textColor="#FFF"
+        android:textSize="30dp"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wpsbt" />
+
+    <Button
+        android:id="@+id/wpsbt"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/wepbt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:height="100dp"
+        android:background="#000"
+        android:fontFamily="serif-monospace"
+        android:text="WPS"
+        android:textColor="#FFF"
+        android:textSize="30dp"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wepbt" />
+
+    <Button
+        android:id="@+id/wepbt"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:height="100dp"
+        android:background="#000"
+        android:fontFamily="serif-monospace"
+        android:text="WEP"
+        android:textColor="#FFF"
+        android:textSize="30dp"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>

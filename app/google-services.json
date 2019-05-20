@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1015981793047",
+    "firebase_url": "https://learn-to-crck-wifi-using-kali.firebaseio.com",
+    "project_id": "learn-to-crck-wifi-using-kali",
+    "storage_bucket": "learn-to-crck-wifi-using-kali.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015981793047:android:767b4bd92b3dd760",
+        "android_client_info": {
+          "package_name": "viktech.learntocrackwifiusingkali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015981793047-uhnk1u9n0hid5o9jjqhq52imsq1uhqn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "viktech.learntocrackwifiusingkali",
+            "certificate_hash": "30206e41d92b0ecaf3c4588a11a14285e4516679"
+          }
+        },
+        {
+          "client_id": "1015981793047-9e4c4jlp0k2u2u60mjnaugid1p8ls9g8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLI2Eys49KzerB_OVx-1mwiDHDIB990Dw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015981793047-9e4c4jlp0k2u2u60mjnaugid1p8ls9g8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vik"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+
+        <ScrollView
+            android:id="@+id/scrollView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000"
+                    android:text="Introduction"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/into" />
+
+                <TextView
+                    android:id="@+id/toolbar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000"
+                    android:text="Requirements"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/textView261"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:text="1..A PC with Kali linux OS (you can also run Kali on Virtual Machine)." />
+
+                <ImageView
+                    android:id="@+id/imageViwdddd12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="20dp"
+                    app:srcCompat="@drawable/kali_screen" />
+
+                <TextView
+                    android:id="@+id/textView1261"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2..WIFI adapter , you can get it from the following site" />
+
+
+                <TextView
+                    android:id="@+id/text111"
+                    android:autoLink="web"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link" />
+
+                <ImageView
+                    android:id="@+id/imageViwddddc12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    app:srcCompat="@drawable/wifiattack" />
+
+
+                <TextView
+                    android:id="@+id/textView126111"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="30dp"
+                    android:text="(Laptops have got inbuilt wifi card but they does not support packet injection )." />
+
+                <TextView
+                    android:id="@+id/teaxtView261"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="40dp"
+                    android:text="@string/text3333" />
+
+
+                <TextView
+                    android:id="@+id/teaxtViewccc261"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="List of all the applications that are present in Kali to crack WIFI" />
+
+                <ImageView
+                    android:id="@+id/imageViwddddddc12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    android:paddingBottom="80dp"
+                    android:paddingTop="10dp"
+                    app:srcCompat="@drawable/kali_wifi_atack" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        app:adSize="BANNER"
+        app:adUnitId="@string/adunitid"
+        app:layout_anchor="@+id/scrollView4"
+        app:layout_anchorGravity="bottom|center"></com.google.android.gms.ads.AdView>
+
+</android.support.design.widget.CoordinatorLayout>
